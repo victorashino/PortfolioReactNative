@@ -22,9 +22,9 @@ export default function HomeScreen() {
                 <ButtonNav onPress={() => navigation.navigate("FetchAddress")} iconName="location-sharp" label="Fetch Address" />
                 <ButtonNav onPress={() => navigation.navigate("Calculator")} iconName="calculator" label="Calculator" />
                 <ButtonNav onPress={() => navigation.navigate("Minefield")} iconName="game-controller" label="Minefield" />
+                <ButtonNav onPress={() => navigation.navigate("CineNow")} iconName="film" label="Cine Now" />
                 <ButtonNav onPress={() => navigation.navigate("TodoList")} iconName="create-sharp" label="To do list" />
-                <ButtonNav onPress={() => navigation.navigate("DogsInfo")} iconName="information-circle" label="Dogs info" />
-                <ButtonNav onPress={() => navigation.navigate("QRCodeScanner")} iconName="qr-code-sharp" label="QR Code Scanner" />
+                <ButtonNav onPress={() => navigation.navigate("Scanner")} iconName="qr-code-sharp" label="Scanner" />
             </View>
         </View>
     );

@@ -1,18 +1,20 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Entypo, Feather } from '@expo/vector-icons'
+import { Entypo, Feather, FontAwesome } from '@expo/vector-icons'
 import Home from './pages/Home';
 import FetchAddress from './pages/FetchAddress';
 import Calculator from './pages/Calculator';
 import Minefield from './pages/Minefield';
-import DogsInfo from './pages/DogsInfo';
+import CineNow from './pages/CineNow';
 import TodoList from './pages/TodoList';
-import QRCodeScanner from './pages/QRCodeScanner';
+import Scanner from './pages/Scanner';
 
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
     return (
         <Tab.Navigator
+            initialRouteName="Home"
             screenOptions={{
                 tabBarActiveTintColor: "#FF4500",
                 tabBarInactiveTintColor: "#AAA",
@@ -27,67 +29,74 @@ export default function Routes() {
                 },
             }}>
             <Tab.Screen 
-            name="FetchAddress" 
-            component={FetchAddress}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={size} color={color} />
-                )
-            }} />
+                name="FetchAddress" 
+                component={FetchAddress}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name='location-pin' size={size} color={color} />
+                    )
+                }} 
+            />
             
             <Tab.Screen 
-            name="Calculator" 
-            component={Calculator}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={size} color={color} />
-                )
-            }}  />
+                name="Calculator" 
+                component={Calculator}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name='calculator' size={size} color={color} />
+                    )
+                }}  
+            />
 
             <Tab.Screen 
-            name="Minefield" 
-            component={Minefield}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={size} color={color} />
-                )
-            }}  />
+                name="Minefield" 
+                component={Minefield}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name='game-controller' size={size} color={color} />
+                    )
+                }}  
+            />
 
             <Tab.Screen 
-            name="Home" 
-            component={Home}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={32} color={color} />
-                )
-            }}  />
+                name="Home" 
+                component={Home}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name='home' size={32} color={color} />
+                    )
+                }}  
+            />
 
             <Tab.Screen 
-            name="DogsInfo" 
-            component={DogsInfo}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={size} color={color} />
-                )
-            }}  />
+                name="CineNow" 
+                component={CineNow}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <FontAwesome name="film" size={size} color={color} />
+                    )
+                }}  
+            />
 
             <Tab.Screen 
-            name="TodoList" 
-            component={TodoList}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={size} color={color} />
-                )
-            }}  />
+                name="TodoList" 
+                component={TodoList}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name='list' size={size} color={color} />
+                    )
+                }}  
+            />
 
             <Tab.Screen 
-            name="QRCodeScanner" 
-            component={QRCodeScanner}
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name='home' size={size} color={color} />
-                )
-            }}  />
+                name="Scanner" 
+                component={Scanner}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <FontAwesome name='qrcode' size={size} color={color} />
+                    )
+                }}  
+            />
         </Tab.Navigator>
     );
 }

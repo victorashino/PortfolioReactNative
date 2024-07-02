@@ -12,7 +12,7 @@ const style = StyleSheet.create({
         height: Dimensions.get('window').width / 4,
         width: Dimensions.get('window').width / 4,
         padding: 20,
-        backgroundColor: '#F0F0F0',
+        backgroundColor: '#EFF',
         textAlign: 'center',
         borderWidth: 1,
         borderColor: '#888'
