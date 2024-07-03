@@ -18,14 +18,25 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff",
-        "permissions": ["CAMERA"]
-      }
+        "permissions": [
+          "CAMERA"
+        ]
+      },
+      "package": "com.bicutoru.Portfolio"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f3c9f406-6c0b-442f-819c-a5aa59ce5d5d"
+      }
+    }
   }
 }
